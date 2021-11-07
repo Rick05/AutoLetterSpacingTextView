@@ -12,8 +12,15 @@ import androidx.appcompat.widget.AppCompatTextView
  * Email : easygoingrickking@gmail.com
  * Desc  : 根据控件宽度自动设置等间距字符间隔的TextView
  */
-class AutoLetterSpacingTextView(context: Context, attrs: AttributeSet?) :
-    AppCompatTextView(context, attrs) {
+class AutoLetterSpacingTextView : AppCompatTextView {
+
+    constructor(context: Context) : super(context)
+    constructor(context: Context, attrs: AttributeSet?) : super(context, attrs)
+    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(
+        context,
+        attrs,
+        defStyleAttr
+    )
 
     override fun onLayout(changed: Boolean, left: Int, top: Int, right: Int, bottom: Int) {
         super.onLayout(changed, left, top, right, bottom)
